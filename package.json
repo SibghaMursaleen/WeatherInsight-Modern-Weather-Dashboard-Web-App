@@ -1,0 +1,31 @@
+{
+  "name": "weatherinsight-modern-weather-dashboard-web-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A responsive React-based application that delivers real-time weather data using the OpenWeatherMap API. It features a clean dashboard UI with current conditions, 5-day forecast, air quality index, sunrise/sunset details, and interactive rainfall charts, designed with Tailwind CSS for a modern SaaS-style experience.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.13.5",
+    "chart.js": "^4.5.1",
+    "react": "^19.2.4",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@vitejs/plugin-react": "^5.1.4",
+    "autoprefixer": "^10.4.27",
+    "lucide-react": "^0.575.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.2.1",
+    "vite": "^7.3.1"
+  }
+}

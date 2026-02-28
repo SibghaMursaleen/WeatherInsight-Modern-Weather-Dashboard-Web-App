@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  /* Modern SaaS Color Palette Variables */
+  --color-primary: #3b82f6;
+  --color-primary-hover: #2563eb;
+  --color-accent: #6366f1;
+  --color-background-custom: #f8fafc;
+  --color-surface: rgba(255, 255, 255, 0.8);
+  --color-border-custom: rgba(226, 232, 240, 0.8);
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+
+  /* Custom Utilities */
+  --shadow-premium: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  body {
+    @apply transition-colors duration-500;
+    background-color: transparent;
+    color: theme('colors.slate.800');
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/40 border border-white/20 shadow-xl transition-all duration-500 flex flex-col min-h-0;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  .glass-card:hover {
+    @apply shadow-2xl border-white/40 bg-white/60;
+  }
+
+  .premium-button {
+    @apply px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm transition-all active:scale-95;
+
+    &:hover {
+      @apply shadow-md bg-slate-50;
+    }
+  }
+
+  .input-sleek {
+    @apply w-full px-4 py-3 bg-white/50 border border-slate-200 rounded-2xl transition-all;
+
+    &:focus {
+      @apply bg-white outline-none ring-4 ring-blue-100/50;
+    }
+
+    &::placeholder {
+      @apply text-slate-400;
+    }
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full cursor-pointer;
+
+  &:hover {
+    @apply bg-slate-300;
+  }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
+
+@keyframes pulse-slow {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
