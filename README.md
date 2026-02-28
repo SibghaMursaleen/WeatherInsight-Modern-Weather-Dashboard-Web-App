@@ -2,8 +2,6 @@
 
 A premium, responsive React-based application that delivers real-time weather data using the OpenWeatherMap API.
 
-![Dashboard Preview](https://github.com/SibghaMursaleen/WeatherInsight-Modern-Weather-Dashboard-Web-App/raw/main/preview_placeholder.png)
-
 ## 🌟 Features
 - **Real-time Data**: Current weather stats fetched from OpenWeatherMap.
 - **Interactive Search**: Search for any city worldwide to see its weather conditions.
